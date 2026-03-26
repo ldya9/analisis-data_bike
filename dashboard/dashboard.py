@@ -37,7 +37,7 @@ h1, h2, h3 {
 # =========================
 @st.cache_data
 def load_data():
-    df = pd.read_csv("main_data.csv")
+    df = pd.read_csv("./dashboard/main_data.csv")
     return df
 
 df = load_data()
@@ -69,7 +69,7 @@ df['weather_label'] = df['weathersit'].map(weather_map)
 # =========================
 # SIDEBAR
 # =========================
-logo = Image.open("logo.png")
+logo = Image.open("./dashboard/logo.png")
 st.sidebar.image(logo, width=140)
 st.sidebar.markdown("## 🚴 Bike Sharing Analysis")
 
